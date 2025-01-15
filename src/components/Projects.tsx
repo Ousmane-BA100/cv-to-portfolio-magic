@@ -16,10 +16,10 @@ const projects = [
     ]
   },
   {
-    title: "Plateforme Interne de Formation",
+    title: "Mise en place d'une plateforme Interne",
     period: "2023",
     technologies: ["Python", "Django", "PostgreSQL", "HTML/CSS"],
-    description: "Création d'une plateforme web pour la gestion des cours et des étudiants.",
+    description: "Mise en place d'une plateforme web pour la gestion des cours pour les étudiants.",
     details: [
       "Développement backend avec Django et PostgreSQL",
       "Système de gestion des utilisateurs et des rôles",
@@ -28,7 +28,7 @@ const projects = [
     ]
   },
   {
-    title: "Analyse de Données Big Data",
+    title: "Big Data avec PySpark",
     period: "2022",
     technologies: ["Python", "PySpark", "Pandas", "Matplotlib"],
     description: "Analyse des trajets de bus et prédiction du temps de trajet en charge.",
@@ -40,27 +40,27 @@ const projects = [
     ]
   },
   {
-    title: "API RESTful pour Réservations",
+    title: "Classification d'images",
     period: "2022",
-    technologies: ["Python", "FastAPI", "SQLAlchemy", "Docker"],
-    description: "Développement d'une API pour la gestion des réservations internationales.",
+    technologies: ["Python", "TensorFlow", "OpenCV", "Scikit-learn"],
+    description: "Classification d'éléments (big data vision) et en satellite.",
     details: [
-      "Conception d'une architecture RESTful",
-      "Implémentation de la logique de réservation",
-      "Documentation automatique avec Swagger",
-      "Conteneurisation avec Docker"
+      "Prétraitement des images avec OpenCV",
+      "Développement de modèles de classification",
+      "Optimisation des performances",
+      "Validation des résultats"
     ]
   },
   {
-    title: "Analyse de Données Clients",
+    title: "Apprentissage Supervisé",
     period: "2022",
-    technologies: ["Python", "Scikit-learn", "Pandas", "Seaborn"],
-    description: "Classification d'images et prédiction des comportements clients.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
+    description: "Analyse de la consommation de gaz dans divers départements français.",
     details: [
       "Analyse exploratoire des données",
-      "Développement de modèles de classification",
+      "Développement de modèles prédictifs",
       "Visualisation des résultats",
-      "Optimisation des performances des modèles"
+      "Optimisation des modèles"
     ]
   }
 ];
@@ -119,7 +119,7 @@ export function Projects() {
                       <Badge 
                         key={tech}
                         variant="secondary"
-                        className="bg-primary/10 text-primary hover:bg-primary/20"
+                        className="bg-primary/10 text-black hover:bg-primary/20"
                       >
                         {tech}
                       </Badge>

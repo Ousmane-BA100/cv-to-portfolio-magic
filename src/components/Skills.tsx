@@ -29,7 +29,15 @@ const skillCategories = [
   },
   {
     title: "Anglais & Méthodologie Agile",
-    skills: ["Scrum"],
+    skills: ["B2", "Scrum"],
+  },
+  {
+    title: "Soft Skills",
+    skills: ["Esprit d'équipe", "Capacité d'adaptation rapide", "Rigueur et sens de l'organisation", "Communication efficace et relationnel naturel"],
+  },
+  {
+    title: "Hobbies",
+    skills: ["Cuisine", "Veille technologique", "Actualité dans le monde", "Sport (foot)", "Lecture", "Podcasts & musique"],
   }
 ];
 

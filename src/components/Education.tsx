@@ -38,7 +38,7 @@ export function Education() {
   return (
     <section id="education" className="bg-muted/50">
       <div className="section-container">
-        <h2 className="section-title">Formation</h2>
+        <h2 className="section-title">Diplômes</h2>
         <div className="space-y-6">
           {education.map((edu) => (
             <Card key={edu.degree} className="hover:shadow-lg transition-shadow">
