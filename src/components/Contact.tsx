@@ -32,7 +32,23 @@ export function Contact() {
     <section id="contact" className="min-h-screen bg-black text-white py-20 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="space-y-8">
-          <h2 className="text-4xl font-bold">Get in Touch</h2>
+          <div className="flex items-center gap-6">
+            <img 
+              src="/lovable-uploads/ea77dc57-d261-45b9-8a8f-63a4c6e8365c.png"
+              alt="Profile"
+              className="w-32 h-32 rounded-full object-cover border-4 border-white"
+            />
+            <div>
+              <h2 className="text-4xl font-bold">Get in Touch</h2>
+              <Button 
+                variant="outline" 
+                className="mt-4 border-white text-white hover:bg-white hover:text-black"
+                onClick={() => window.open('/CV_Ousmane_BA.pdf', '_blank')}
+              >
+                Télécharger CV
+              </Button>
+            </div>
+          </div>
           
           <div className="space-y-4">
             <div className="flex items-center gap-3">
@@ -60,7 +76,7 @@ export function Contact() {
               href="https://github.com/Ousmane-BA100"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black rounded-lg p-3 hover:bg-gray-900 transition-colors"
+              className="bg-white text-black rounded-lg p-3 hover:bg-gray-200 transition-colors"
             >
               <Github className="w-6 h-6" />
             </a>
@@ -68,7 +84,7 @@ export function Contact() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black rounded-lg p-3 hover:bg-gray-900 transition-colors"
+              className="bg-white text-black rounded-lg p-3 hover:bg-gray-200 transition-colors"
             >
               <Linkedin className="w-6 h-6" />
             </a>
@@ -76,7 +92,7 @@ export function Contact() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black rounded-lg p-3 hover:bg-gray-900 transition-colors"
+              className="bg-white text-black rounded-lg p-3 hover:bg-gray-200 transition-colors"
             >
               <LinkIcon className="w-6 h-6" />
             </a>
