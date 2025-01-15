@@ -60,7 +60,7 @@ export function Hero() {
           className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl"
         >
           <img
-            src="/placeholder.svg"
+            src="/lovable-uploads/ea77dc57-d261-45b9-8a8f-63a4c6e8365c.png"
             alt="Ousmane BA"
             className="w-full h-full object-cover"
           />
