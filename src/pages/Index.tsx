@@ -6,6 +6,7 @@ import { Education } from "@/components/Education";
 import { Projects } from "@/components/Projects";
 import { SoftSkills } from "@/components/SoftSkills";
 import { Hobbies } from "@/components/Hobbies";
+import { Contact } from "@/components/Contact";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
         <Education />
         <SoftSkills />
         <Hobbies />
+        <Contact />
       </main>
     </div>
   );
