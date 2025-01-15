@@ -1,65 +1,80 @@
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { MapPin, User, Car, Flag } from "lucide-react";
 
 export function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-background">
-      <div className="section-container">
-        <div className="max-w-3xl mx-auto text-center space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Ousmane BA
-            </h1>
-          </motion.div>
+    <section className="min-h-screen flex items-center bg-white py-20 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-left space-y-6"
+        >
+          <h1 className="text-6xl font-bold text-gray-900">
+            Ousmane BA
+          </h1>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <p className="text-3xl text-text-light font-light mb-8">
-              Data Engineer / Analytics
-            </p>
-          </motion.div>
+          <h2 className="text-3xl text-gray-700">
+            Data Engineer / Analytics
+          </h2>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <p className="text-lg text-text-light mb-12 max-w-2xl mx-auto">
-              Passionné par l'analyse de données et le machine learning, je transforme les données en insights actionnables.
-            </p>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex gap-6 justify-center"
-          >
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary-dark text-white px-8"
-              asChild
+          <p className="text-lg text-gray-600 max-w-2xl">
+            Passionné par l'analyse de données et le machine learning, je transforme les données en insights actionnables. 
+            Expert en conception de pipelines de données et en développement de solutions analytiques.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+            <InfoCard icon={<User className="w-5 h-5" />} text="28 ans" />
+            <InfoCard icon={<MapPin className="w-5 h-5" />} text="Paris, France" />
+            <InfoCard icon={<Car className="w-5 h-5" />} text="Permis B" />
+            <InfoCard icon={<Flag className="w-5 h-5" />} text="Sénégalais" />
+          </div>
+
+          <div className="flex gap-4 mt-8">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="/CV_Ousmane_BA.pdf"
+              className="inline-flex items-center px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <a href="#contact">Me contacter</a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/10"
-              asChild
+              Télécharger CV
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="#contact"
+              className="inline-flex items-center px-6 py-3 border-2 border-black text-black rounded-full hover:bg-black hover:text-white transition-colors"
             >
-              <a href="#experiences">Voir mes expériences</a>
-            </Button>
-          </motion.div>
-        </div>
+              Me contacter
+            </motion.a>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl"
+        >
+          <img
+            src="/placeholder.svg"
+            alt="Ousmane BA"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
       </div>
     </section>
+  );
+}
+
+function InfoCard({ icon, text }: { icon: React.ReactNode; text: string }) {
+  return (
+    <div className="flex items-center gap-3 px-4 py-2 bg-black text-white rounded-full">
+      {icon}
+      <span>{text}</span>
+    </div>
   );
 }
