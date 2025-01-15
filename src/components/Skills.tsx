@@ -38,13 +38,13 @@ const item = {
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 bg-background-dark">
+    <section id="skills" className="py-20 bg-background">
       <div className="section-container">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-16 text-white"
+          className="text-4xl font-bold text-center mb-16 text-text-dark"
         >
           Compétences
         </motion.h2>
@@ -57,15 +57,15 @@ export function Skills() {
         >
           {skillCategories.map((category) => (
             <motion.div key={category.title} variants={item}>
-              <Card className="bg-white/5 backdrop-blur-sm border-none hover:bg-white/10 transition-colors">
+              <Card className="bg-white hover:shadow-lg transition-shadow duration-300 border border-gray-100">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-primary-light">{category.title}</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-[#2563eb]">{category.title}</h3>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
                       <Badge 
                         key={skill} 
                         variant="secondary"
-                        className="bg-primary/20 text-primary-light hover:bg-primary/30"
+                        className="bg-[#2563eb]/10 text-[#2563eb] hover:bg-[#2563eb]/20 border-none"
                       >
                         {skill}
                       </Badge>
