@@ -1,48 +1,42 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { ChevronDown } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Programmation et Outils",
-    skills: ["Python (+4 ans)", "SQL/NoSQL (+3)", "Git (+3)", "C/C++", "GitHub Actions", "GitLab CI"],
+    title: "Big Data & Cloud",
+    skills: [
+      { name: "ETL Pipelines", value: 85 },
+      { name: "PySpark", value: 90 },
+      { name: "MapReduce", value: 80 },
+      { name: "AWS (EC2, Lambda, Fargate)", value: 85 },
+      { name: "GCP (Compute Engine)", value: 80 },
+      { name: "Databricks", value: 85 },
+      { name: "SnowFlake", value: 80 },
+    ]
   },
   {
-    title: "SGBD",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
-  },
-  {
-    title: "Big Data et Cloud",
-    skills: ["DataBricks", "SnowFlake", "AWS (EC2, Lambda, Fargate)", "S3", "RDS", "RedShift", "SageMaker", "GCP (Compute Engine, BigQuery)", "Kubernetes Engine", "Cloud Storage", "AI Platform", "Spark", "Hadoop"],
-  },
-  {
-    title: "Expertise Technique",
-    skills: ["React", "Django", "Airflow", "API", "Docker", "FastAPI", "Flask", "Django", "culture DevOps (déploiement via CI/CD)"],
-  },
-  {
-    title: "Visualisation",
-    skills: ["Power BI", "Tableau", "SAP BI", "Streamlit"],
+    title: "Programmation",
+    skills: [
+      { name: "Python", value: 90 },
+      { name: "SQL/NoSQL", value: 85 },
+      { name: "Git/GitHub", value: 85 },
+      { name: "C/C++", value: 75 },
+      { name: "React", value: 80 },
+    ]
   },
   {
     title: "Data Science",
-    skills: ["Scikit-learn", "Machine Learning", "TensorFlow", "Pytorch", "Scikit-learn"],
+    skills: [
+      { name: "Machine Learning", value: 85 },
+      { name: "Deep Learning", value: 80 },
+      { name: "Scikit-learn", value: 85 },
+      { name: "TensorFlow/PyTorch", value: 80 },
+      { name: "Traitement d'images", value: 75 },
+    ]
   }
 ];
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
-};
 
 export function Skills() {
   return (
@@ -57,29 +51,55 @@ export function Skills() {
           Compétences
         </motion.h2>
         <motion.div 
-          variants={container}
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: { staggerChildren: 0.2 }
+            }
+          }}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {skillCategories.map((category) => (
-            <motion.div key={category.title} variants={item}>
-              <Card className="h-full hover:shadow-lg transition-all duration-300 bg-white">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-primary">{category.title}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill) => (
-                      <Badge 
-                        key={skill} 
-                        variant="secondary"
-                        className="bg-primary/10 text-black hover:bg-primary/20 border-none"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
+            <motion.div 
+              key={category.title}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0 }
+              }}
+            >
+              <Card className="h-full hover:shadow-lg transition-all duration-300">
+                <Collapsible>
+                  <CollapsibleTrigger className="w-full">
+                    <CardContent className="p-6 flex justify-between items-center">
+                      <h3 className="text-xl font-semibold text-primary">{category.title}</h3>
+                      <ChevronDown className="h-5 w-5" />
+                    </CardContent>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <CardContent className="pt-0 px-6 pb-6">
+                      <div className="space-y-4">
+                        {category.skills.map((skill) => (
+                          <div key={skill.name} className="space-y-2">
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm font-medium">{skill.name}</span>
+                              <span className="text-sm font-medium">{skill.value}%</span>
+                            </div>
+                            <div className="w-full bg-gray-100 rounded-full h-2">
+                              <div 
+                                className="bg-primary h-2 rounded-full transition-all duration-500"
+                                style={{ width: `${skill.value}%` }}
+                              />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </CollapsibleContent>
+                </Collapsible>
               </Card>
             </motion.div>
           ))}

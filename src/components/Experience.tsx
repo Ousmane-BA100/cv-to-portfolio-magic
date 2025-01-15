@@ -7,9 +7,12 @@ const experiences = [
     period: "09/2023 - 09/2025",
     location: "Colombes, 92700",
     description: [
-      "Mise en œuvre de workflow ETL : Sources de données Salesforce, SAP, MySQL et fichiers plats",
+      "Mise en œuvre de workflows ETL : Sources de données Salesforce, SAP, MySQL et fichiers plats",
       "Conception de tableaux de bord via SAP BI 4.3",
       "Développement d'un modèle de machine learning",
+      "Gestion d'un workflow de données avec un modèle en étoile",
+      "Développement de vue multimétier avec Streamlit et déploiement via pipeline GitLab",
+      "Technologies : AWS (EC2, Lambda, Fargate), Python (Pandas, Streamlit), SPSS, MySQL, MongoDB",
     ],
   },
   {
@@ -19,7 +22,10 @@ const experiences = [
     location: "Bordeaux, 33300",
     description: [
       "Extraction de données clients inactifs via des requêtes SQL",
+      "Préparation de données : nettoyage des variables, gestion des valeurs manquantes",
+      "Segmentation des clients inactifs avec K-means et HAC",
       "Modélisation prédictive pour optimiser le personnel du centre d'appels",
+      "Outils utilisés : R, Python, SPSS, SQL, Excel",
     ],
   },
 ];

@@ -9,6 +9,8 @@ const education = [
       "Administration de bases de données SQL/NoSQL",
       "Data Lake, Big Data, Machine Learning",
       "Deep Learning, Architecture distribuée",
+      "ETL, Sécurité des données",
+      "Visualisation de données",
     ],
   },
   {
@@ -17,8 +19,10 @@ const education = [
     period: "09/2021 - 09/2022",
     details: [
       "Modèles linéaires et logistiques",
-      "Deep Learning",
+      "Réseaux neuronaux (Deep Learning)",
       "Traitement d'images",
+      "Machine Learning",
+      "Statistiques avancées",
     ],
   },
   {
@@ -27,9 +31,10 @@ const education = [
     period: "09/2020 - 07/2021",
     details: [
       "Algèbre Linéaire",
-      "Proba Statistique",
+      "Probabilités et Statistiques",
       "C++",
       "Python",
+      "Mathématiques appliquées",
     ],
   },
 ];
