@@ -1,5 +1,6 @@
 import { Home, Database, Briefcase, GraduationCap } from "lucide-react";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
+import { motion } from "framer-motion";
 
 const menuItems = [
   { title: "Accueil", icon: Home, href: "#home" },
@@ -10,26 +11,39 @@ const menuItems = [
 
 export function Navigation() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b">
+    <motion.nav 
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100 shadow-sm"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <NavigationMenu className="relative flex h-16 items-center justify-between">
           <NavigationMenuList className="flex space-x-8">
-            {menuItems.map((item) => (
+            {menuItems.map((item, index) => (
               <NavigationMenuItem key={item.title}>
-                <NavigationMenuLink
-                  asChild
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-                >
-                  <a href={item.href} className="flex items-center gap-2">
-                    <item.icon className="h-5 w-5" />
-                    <span>{item.title}</span>
-                  </a>
+                <NavigationMenuLink asChild>
+                  <motion.a
+                    href={item.href}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#2563eb] transition-colors relative"
+                  >
+                    <item.icon className="h-4 w-4" />
+                    <span className="font-sans">{item.title}</span>
+                    <motion.div
+                      className="absolute bottom-0 left-0 h-0.5 w-0 bg-[#2563eb]"
+                      whileHover={{ width: "100%" }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </motion.a>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
