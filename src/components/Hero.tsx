@@ -35,7 +35,7 @@ export function Hero() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/CV_Ousmane_BA.pdf"
+              href="/CV_Ousmane.pdf"
               className="inline-flex items-center px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
