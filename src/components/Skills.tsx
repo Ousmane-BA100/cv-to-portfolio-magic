@@ -26,18 +26,6 @@ const skillCategories = [
   {
     title: "Data Science",
     skills: ["Scikit-learn", "Machine Learning", "TensorFlow", "Pytorch", "Scikit-learn"],
-  },
-  {
-    title: "Anglais & Méthodologie Agile",
-    skills: ["B2", "Scrum"],
-  },
-  {
-    title: "Soft Skills",
-    skills: ["Esprit d'équipe", "Capacité d'adaptation rapide", "Rigueur et sens de l'organisation", "Communication efficace et relationnel naturel"],
-  },
-  {
-    title: "Hobbies",
-    skills: ["Cuisine", "Veille technologique", "Actualité dans le monde", "Sport (foot)", "Lecture", "Podcasts & musique"],
   }
 ];
 
