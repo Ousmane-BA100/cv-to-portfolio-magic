@@ -24,17 +24,29 @@ export default {
       },
       colors: {
         primary: {
-          DEFAULT: "#2563eb",
+          DEFAULT: "#9b87f5",
+          light: "#D6BCFA",
+          dark: "#7E69AB",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#7c3aed",
+          DEFAULT: "#0EA5E9",
+          light: "#D3E4FD",
+          dark: "#0FA0CE",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        background: {
+          DEFAULT: "#F1F0FB",
+          dark: "#1A1F2C",
+        },
+        text: {
+          DEFAULT: "#333333",
+          light: "#8E9196",
+          dark: "#222222",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
