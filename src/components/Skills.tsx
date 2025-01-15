@@ -4,28 +4,32 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
   {
-    title: "Langages & Outils",
-    skills: ["Python", "SQL/NoSQL", "Git", "R", "SGBD", "Big Data", "Java", "C++", "JavaScript", "TypeScript", "HTML/CSS"],
+    title: "Programmation et Outils",
+    skills: ["Python (+4 ans)", "SQL/NoSQL (+3)", "Git (+3)", "C/C++", "GitHub Actions", "GitLab CI"],
   },
   {
-    title: "Cloud & Infrastructure",
-    skills: ["AWS EC2", "Lambda", "Fargate", "Spark", "Hadoop", "Streamlit", "Docker", "Kubernetes", "Jenkins", "Terraform"],
+    title: "SGBD",
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
+  },
+  {
+    title: "Big Data et Cloud",
+    skills: ["DataBricks", "SnowFlake", "AWS (EC2, Lambda, Fargate)", "S3", "RDS", "RedShift", "SageMaker", "GCP (Compute Engine, BigQuery)", "Kubernetes Engine", "Cloud Storage", "AI Platform", "Spark", "Hadoop"],
+  },
+  {
+    title: "Expertise Technique",
+    skills: ["React", "Django", "Airflow", "API", "Docker", "FastAPI", "Flask", "Django", "culture DevOps (déploiement via CI/CD)"],
+  },
+  {
+    title: "Visualisation",
+    skills: ["Power BI", "Tableau", "SAP BI", "Streamlit"],
   },
   {
     title: "Data Science",
-    skills: ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "PyTorch", "OpenCV"],
+    skills: ["Scikit-learn", "Machine Learning", "TensorFlow", "Pytorch", "Scikit-learn"],
   },
   {
-    title: "Visualisation & BI",
-    skills: ["Power BI", "Tableau", "SAP BI", "Streamlit", "D3.js", "Matplotlib", "Seaborn", "Plotly"],
-  },
-  {
-    title: "Base de données",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Cassandra", "Neo4j", "ElasticSearch"],
-  },
-  {
-    title: "Méthodologies & Soft Skills",
-    skills: ["Agile/Scrum", "DevOps", "Clean Code", "Design Patterns", "TDD", "Communication", "Travail d'équipe", "Gestion de projet"],
+    title: "Anglais & Méthodologie Agile",
+    skills: ["Scrum"],
   }
 ];
 
@@ -73,7 +77,7 @@ export function Skills() {
                       <Badge 
                         key={skill} 
                         variant="secondary"
-                        className="bg-primary/10 text-primary hover:bg-primary/20 border-none"
+                        className="bg-primary/10 text-black hover:bg-primary/20 border-none"
                       >
                         {skill}
                       </Badge>
