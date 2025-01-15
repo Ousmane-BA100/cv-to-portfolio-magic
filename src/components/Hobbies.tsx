@@ -1,14 +1,28 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
-const hobbies = [
-  "Cuisine",
-  "Veille technologique",
-  "Actualité dans le monde",
-  "Sport (foot)",
-  "Lecture",
-  "Podcasts & musique"
+const hobbiesCategories = [
+  {
+    title: "Loisirs Créatifs",
+    skills: [
+      { name: "Cuisine", value: 85 },
+      { name: "Lecture", value: 80 },
+    ]
+  },
+  {
+    title: "Sport et Bien-être",
+    skills: [
+      { name: "Sport (foot)", value: 90 },
+    ]
+  },
+  {
+    title: "Culture et Actualités",
+    skills: [
+      { name: "Veille technologique", value: 95 },
+      { name: "Actualité dans le monde", value: 85 },
+      { name: "Podcasts & musique", value: 90 },
+    ]
+  }
 ];
 
 const container = {
@@ -43,23 +57,33 @@ export function Hobbies() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          <Card className="h-full hover:shadow-lg transition-all duration-300 bg-white">
-            <CardContent className="p-6">
-              <div className="flex flex-wrap gap-2">
-                {hobbies.map((hobby) => (
-                  <Badge 
-                    key={hobby} 
-                    variant="secondary"
-                    className="bg-primary/10 text-black hover:bg-primary/20 border-none"
-                  >
-                    {hobby}
-                  </Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          {hobbiesCategories.map((category) => (
+            <motion.div key={category.title} variants={item}>
+              <Card className="h-full hover:shadow-lg transition-all duration-300 bg-white">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-6 text-primary">{category.title}</h3>
+                  <div className="space-y-6">
+                    {category.skills.map((skill) => (
+                      <div key={skill.name} className="space-y-2">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm font-medium">{skill.name}</span>
+                          <span className="text-sm font-medium">{skill.value}%</span>
+                        </div>
+                        <div className="w-full bg-gray-100 rounded-full h-2.5">
+                          <div 
+                            className="bg-black h-2.5 rounded-full transition-all duration-500"
+                            style={{ width: `${skill.value}%` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

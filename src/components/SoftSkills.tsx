@@ -1,14 +1,29 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Slider } from "@/components/ui/slider";
 import { motion } from "framer-motion";
 
-const softSkills = [
-  "Esprit d'équipe",
-  "Capacité d'adaptation rapide",
-  "Rigueur et sens de l'organisation",
-  "Communication efficace et relationnel naturel",
-  "Anglais (B2)",
-  "Méthodologie Agile (Scrum)"
+const softSkillsCategories = [
+  {
+    title: "Communication",
+    skills: [
+      { name: "Esprit d'équipe", value: 95 },
+      { name: "Communication efficace et relationnel naturel", value: 90 },
+    ]
+  },
+  {
+    title: "Adaptabilité",
+    skills: [
+      { name: "Capacité d'adaptation rapide", value: 90 },
+      { name: "Rigueur et sens de l'organisation", value: 85 },
+    ]
+  },
+  {
+    title: "Langues et Méthodologies",
+    skills: [
+      { name: "Anglais (B2)", value: 80 },
+      { name: "Méthodologie Agile (Scrum)", value: 85 },
+    ]
+  }
 ];
 
 const container = {
@@ -43,23 +58,33 @@ export function SoftSkills() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          <Card className="h-full hover:shadow-lg transition-all duration-300 bg-white">
-            <CardContent className="p-6">
-              <div className="flex flex-wrap gap-2">
-                {softSkills.map((skill) => (
-                  <Badge 
-                    key={skill} 
-                    variant="secondary"
-                    className="bg-primary/10 text-black hover:bg-primary/20 border-none"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          {softSkillsCategories.map((category) => (
+            <motion.div key={category.title} variants={item}>
+              <Card className="h-full hover:shadow-lg transition-all duration-300 bg-white">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-6 text-primary">{category.title}</h3>
+                  <div className="space-y-6">
+                    {category.skills.map((skill) => (
+                      <div key={skill.name} className="space-y-2">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm font-medium">{skill.name}</span>
+                          <span className="text-sm font-medium">{skill.value}%</span>
+                        </div>
+                        <div className="w-full bg-gray-100 rounded-full h-2.5">
+                          <div 
+                            className="bg-black h-2.5 rounded-full transition-all duration-500"
+                            style={{ width: `${skill.value}%` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
