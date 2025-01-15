@@ -57,13 +57,15 @@ export function Hero() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl"
+          className="relative w-[400px] h-[400px] mx-auto"
         >
-          <img
-            src="/lovable-uploads/ea77dc57-d261-45b9-8a8f-63a4c6e8365c.png"
-            alt="Ousmane BA"
-            className="w-full h-full object-cover"
-          />
+          <div className="w-full h-full rounded-full overflow-hidden border-4 border-black shadow-2xl">
+            <img
+              src="/lovable-uploads/ea77dc57-d261-45b9-8a8f-63a4c6e8365c.png"
+              alt="Ousmane BA"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
