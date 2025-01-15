@@ -91,7 +91,7 @@ export function Contact() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="bg-transparent border-gray-200"
+              className="bg-transparent border-gray-200 text-black"
             />
             <Input
               type="text"
@@ -99,14 +99,14 @@ export function Contact() {
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               required
-              className="bg-transparent border-gray-200"
+              className="bg-transparent border-gray-200 text-black"
             />
             <Textarea
               placeholder="Your message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
-              className="bg-transparent border-gray-200 min-h-[200px]"
+              className="bg-transparent border-gray-200 text-black min-h-[200px]"
             />
             <Button type="submit" className="w-full bg-black text-white hover:bg-gray-900">
               Send Message
