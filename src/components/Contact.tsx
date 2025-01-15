@@ -2,8 +2,32 @@ import { MapPin, Mail, Phone, Github, Linkedin, Link as LinkIcon } from "lucide-
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
+import { useState } from "react";
+import { useToast } from "./ui/use-toast";
 
 export function Contact() {
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Here you would typically send the email using a backend service
+    console.log("Form submitted:", { email, subject, message });
+    
+    toast({
+      title: "Message sent!",
+      description: "Thank you for your message. We'll get back to you soon.",
+    });
+
+    // Reset form
+    setEmail("");
+    setSubject("");
+    setMessage("");
+  };
+
   return (
     <section id="contact" className="min-h-screen bg-black text-white py-20 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -60,22 +84,31 @@ export function Contact() {
         </div>
 
         <div className="bg-white rounded-3xl p-8">
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <Input
               type="email"
               placeholder="Your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
               className="bg-transparent border-gray-200"
             />
             <Input
               type="text"
               placeholder="Subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              required
               className="bg-transparent border-gray-200"
             />
             <Textarea
               placeholder="Your message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
               className="bg-transparent border-gray-200 min-h-[200px]"
             />
-            <Button className="w-full bg-black text-white hover:bg-gray-900">
+            <Button type="submit" className="w-full bg-black text-white hover:bg-gray-900">
               Send Message
             </Button>
           </form>
