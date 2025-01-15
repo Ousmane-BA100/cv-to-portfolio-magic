@@ -63,7 +63,7 @@ export function Hero() {
             <img
               src="/lovable-uploads/ea77dc57-d261-45b9-8a8f-63a4c6e8365c.png"
               alt="Ousmane BA"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-center"
             />
           </div>
         </motion.div>
