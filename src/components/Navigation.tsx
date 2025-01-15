@@ -1,4 +1,4 @@
-import { Home, Database, Briefcase, GraduationCap } from "lucide-react";
+import { Home, Database, Briefcase, GraduationCap, Heart, Users } from "lucide-react";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { motion } from "framer-motion";
 
@@ -6,7 +6,9 @@ const menuItems = [
   { title: "Accueil", icon: Home, href: "#home" },
   { title: "Compétences", icon: Database, href: "#skills" },
   { title: "Expériences", icon: Briefcase, href: "#experiences" },
-  { title: "Formation", icon: GraduationCap, href: "#education" },
+  { title: "Diplômes", icon: GraduationCap, href: "#education" },
+  { title: "Soft Skills", icon: Users, href: "#soft-skills" },
+  { title: "Hobbies", icon: Heart, href: "#hobbies" },
 ];
 
 export function Navigation() {
