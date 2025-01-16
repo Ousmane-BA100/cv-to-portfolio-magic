@@ -18,10 +18,12 @@ const skillCategories = [
     title: "Programmation",
     skills: [
       { name: "Python", value: 90 },
+      { name: "POO", value: 85 },
       { name: "SQL/NoSQL", value: 85 },
       { name: "Git", value: 85 },
       { name: "C/C++", value: 75 },
       { name: "R", value: 80 },
+      { name: "Java", value: 70 },
     ]
   },
   {
@@ -43,7 +45,7 @@ const skillCategories = [
       { name: " DBT", value: 80 },
       { name: "Docker", value: 75 },
       { name: "FastAPI/Flask/Django", value: 95},
-      { name: "CI/CD : GitHub Actions/GitLab CI", value: 95}
+      { name: "GitHub Actions/GitLab CI", value: 95}
     ]
   }
 ];
