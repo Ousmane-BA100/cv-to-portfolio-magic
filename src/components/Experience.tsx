@@ -29,7 +29,7 @@ const experiences = [
       },
       {
         text: "Modélisation prédictive pour optimiser le personnel du centre d'appels",
-        impact: "Les prévisions ont permis de déterminer le volume d'appels quotidien, aboutissant à une réduction des effectifs nécessaires de 10% tout en maintenant un service client de qualité"
+        impact: "Les prévisions ont permis de déterminer le volume d'appels quotidien, aboutissant à une réduction des effectifs nécessaires tout en maintenant un service client de qualité"
       },
       "Outils utilisés : R, Python, SPSS, SQL, Excel",
     ],
