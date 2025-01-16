@@ -91,7 +91,7 @@ export function Skills() {
                         </div>
                         <div className="w-full bg-gray-100 rounded-full h-2">
                           <div 
-                            className="bg-primary h-2 rounded-full transition-all duration-500"
+                            className="bg-gradient-to-r from-primary to-primary-light h-2 rounded-full transition-all duration-500"
                             style={{ width: `${skill.value}%` }}
                           />
                         </div>
