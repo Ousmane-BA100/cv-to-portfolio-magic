@@ -18,11 +18,11 @@ export function Navigation() {
           </div>
           
           <div className="flex items-center space-x-8">
-            <NavLink href="#education">Formation</NavLink>
-            <NavLink href="#experience">Expérience</NavLink>
             <NavLink href="#skills">Compétences</NavLink>
-            <NavLink href="#soft-skills">Soft Skills</NavLink>
             <NavLink href="#projects">Projets</NavLink>
+            <NavLink href="#experience">Expérience</NavLink>
+            <NavLink href="#education">Diplômes</NavLink>
+            <NavLink href="#soft-skills">Soft Skills</NavLink>
             <NavLink href="#hobbies">Hobbies</NavLink>
             <NavLink href="#contact" className="text-primary hover:text-primary/80">
               Contact

@@ -49,9 +49,7 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
@@ -59,7 +57,7 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold tracking-tight;
+    @apply font-heading font-semibold tracking-tight text-primary;
   }
 }
 
@@ -68,5 +66,5 @@
 }
 
 .section-title {
-  @apply text-3xl font-heading font-bold text-black mb-8;
+  @apply text-3xl font-heading font-bold text-primary mb-8;
 }
