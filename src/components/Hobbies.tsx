@@ -12,7 +12,9 @@ const hobbiesCategories = [
   {
     title: "Sport et Bien-être",
     skills: [
-      { name: "Sport (foot)", value: 90 },
+      {name: "Basic-fit", value: 90 },
+      { name: "Basket", value: 85 },
+      {name: "Foot", value: 70 },
     ]
   },
   {
