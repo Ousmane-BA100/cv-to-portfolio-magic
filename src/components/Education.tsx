@@ -18,11 +18,12 @@ const education = [
     school: "Université de Bordeaux",
     period: "09/2021 - 09/2022",
     details: [
-      "Modèles linéaires et logistiques",
-      "Réseaux neuronaux (Deep Learning)",
-      "Traitement d'images",
-      "Machine Learning",
-      "Statistiques avancées",
+      "Introduction à l'apprentissage profond et Défi science des données",
+      "Modèle linéaire, régression logistique, réseaux de neurones profonds",
+      "Applications en traitement d'images et en traitement du langage naturel (NLP)",
+      "Statistique et analyse de données en grande dimension",
+      "Base de données SQL/NoSQL",
+      "Management et éthique",
     ],
   },
   {
