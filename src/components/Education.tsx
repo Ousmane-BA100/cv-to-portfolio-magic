@@ -7,9 +7,9 @@ const education = [
     period: "09/2023 - 07/2025",
     details: [
       "Administration de bases de données SQL/NoSQL",
-      "Data Lake, Big Data, Machine Learning",
-      "Deep Learning, Architecture distribuée",
-      "ETL, Sécurité des données",
+      "Architecture distribuée, Data Lake, Big Data, ",
+      "Machine Learning, Deep Learning, Programmation AI ",
+      "ETL, Sécurité des données, Gouvernance des données",
       "Visualisation de données",
     ],
   },
