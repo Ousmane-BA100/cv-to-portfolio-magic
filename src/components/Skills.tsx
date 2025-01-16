@@ -42,14 +42,9 @@ export function Skills() {
   return (
     <section id="skills" className="py-20 bg-background">
       <div className="section-container">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-16 text-primary"
-        >
+        <h2 className="section-title">
           Compétences
-        </motion.h2>
+        </h2>
         <motion.div 
           variants={{
             hidden: { opacity: 0 },
