@@ -16,7 +16,7 @@ const education = [
   {
     degree: "Master 2 : Modélisation Statistique et Stochastique (Data Science)",
     school: "Université de Bordeaux",
-    period: "09/2021 - 09/2022",
+    period: "09/2021 - 09/2023",
     details: [
       "Introduction à l'apprentissage profond et Défi science des données",
       "Modèle linéaire, régression logistique, réseaux de neurones profonds",
