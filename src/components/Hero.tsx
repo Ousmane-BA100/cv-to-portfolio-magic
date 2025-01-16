@@ -54,37 +54,42 @@ export function Hero() {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="relative w-[400px] h-[400px] mx-auto"
-        >
-          <div className="w-full h-full rounded-full overflow-hidden border-4 border-black shadow-2xl">
-            <img
-              src="/lovable-uploads/ea77dc57-d261-45b9-8a8f-63a4c6e8365c.png"
-              alt="Ousmane BA"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-        </motion.div>
+        <div className="relative">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-[400px] h-[400px] mx-auto"
+          >
+            <div className="w-full h-full rounded-full overflow-hidden border-4 border-black shadow-2xl">
+              <img
+                src="/lovable-uploads/ea77dc57-d261-45b9-8a8f-63a4c6e8365c.png"
+                alt="Ousmane BA"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+          </motion.div>
+          
+          <motion.div 
+            className="text-center mt-8"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ 
+              opacity: 1, 
+              x: [0, 10, 0] 
+            }}
+            transition={{ 
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut"
+            }}
+          >
+            <p className="text-2xl font-heading italic text-gray-800">
+              "Turning Data into Insights, Code into Innovation"
+            </p>
+          </motion.div>
+        </div>
       </div>
-      
-      <motion.div 
-        className="absolute bottom-32 left-0 w-full text-center"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ 
-          duration: 0.8,
-          delay: 0.5,
-          type: "spring",
-          stiffness: 100
-        }}
-      >
-        <p className="text-2xl font-heading italic text-gray-800">
-          "Turning Data into Insights, Code into Innovation"
-        </p>
-      </motion.div>
     </section>
   );
 }
