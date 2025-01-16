@@ -32,19 +32,29 @@ const experiences = [
     period: "04/2023 - 06/2023",
     location: "Bordeaux, 33300",
     description: [
-      "Extraction de données clients inactifs via des requêtes SQL",
-      "Préparation de données : nettoyage des variables, gestion des valeurs manquantes",
+      {
+        text: "Extraction de données clients inactifs via des requêtes SQL",
+        impact: "Création d'une base de données ciblée permettant une analyse approfondie des profils clients inactifs",
+        learned: "Maîtrise des requêtes SQL complexes et optimisation des performances des requêtes"
+      },
+      {
+        text: "Préparation de données : nettoyage des variables, gestion des valeurs manquantes",
+        impact: "Amélioration de la qualité et de la fiabilité des données pour l'analyse",
+        learned: "Techniques avancées de data cleaning et best practices pour le traitement des valeurs manquantes"
+      },
       {
         text: "Segmentation des clients inactifs avec K-means et HAC",
-        impact: "Segmentation permettant de cibler efficacement les campagnes marketing pour convertir les clients inactifs en actifs, avec un impact direct sur le taux de réactivation"
+        impact: "Segmentation permettant de cibler efficacement les campagnes marketing pour convertir les clients inactifs en actifs, avec un impact direct sur le taux de réactivation",
+        learned: "Application pratique des algorithmes de clustering et interprétation des résultats pour des cas d'usage business concrets"
       },
       {
         text: "Modélisation prédictive pour optimiser le personnel du centre d'appels",
-        impact: "Les prévisions ont permis de déterminer le volume d'appels quotidien, aboutissant à une réduction des effectifs nécessaires tout en maintenant un service client de qualité"
-      },
-      "Outils utilisés : R, Python, SPSS, SQL, Excel",
+        impact: "Les prévisions ont permis de déterminer le volume d'appels quotidien, aboutissant à une réduction des effectifs nécessaires tout en maintenant un service client de qualité",
+        learned: "Maîtrise des techniques de forecasting et d'optimisation des ressources humaines basées sur les données"
+      }
     ],
-  },
+    technologies: "R, Python, SPSS, SQL, Excel"
+  }
 ];
 
 export function Experience() {
