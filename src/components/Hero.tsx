@@ -69,6 +69,22 @@ export function Hero() {
           </div>
         </motion.div>
       </div>
+      
+      <motion.div 
+        className="absolute bottom-32 left-0 w-full text-center"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ 
+          duration: 0.8,
+          delay: 0.5,
+          type: "spring",
+          stiffness: 100
+        }}
+      >
+        <p className="text-2xl font-heading italic text-gray-800">
+          "Turning Data into Insights, Code into Innovation"
+        </p>
+      </motion.div>
     </section>
   );
 }
