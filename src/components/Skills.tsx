@@ -18,12 +18,12 @@ const skillCategories = [
     title: "Programmation & Outils",
     skills: [
       { name: "Python", value: 90 },
-      { name: "POO", value: 85 },
+      { name: "POO", value: 70 },
       { name: "SQL/NoSQL", value: 85 },
-      { name: "Git", value: 85 },
-      { name: "MySQL, PostgreSQL", value: 85 },
+      { name: "Git", value: 80 },
+      { name: "MySQL, PostgreSQL", value: 90 },
       { name: "SQL Server, SQLite", value: 80 },
-      { name: "MongoDB, Elasticsearch", value: 80 },
+      { name: "MongoDB, Elasticsearch", value: 70 },
     ]
   },
   {
