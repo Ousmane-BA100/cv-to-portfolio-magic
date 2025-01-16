@@ -7,7 +7,7 @@ const experiences = [
     period: "09/2023 - 09/2025",
     location: "Colombes, 92700",
     description: [
-      "Mise en œuvre de workflows ETL : Sources de données Salesforce, SAP, MySQL et fichiers plats. Cible : base de données MySQL. Technologies : Pycharm, Pandas, JSON, APIs (Salesforce, SAP)",
+      "Mise en œuvre de workflows ETL : Sources de données Salesforce, SAP, MySQL et fichiers plats vers MySQL. Les technologies utilisées : Pycharm, Pandas, JSON, APIs (Salesforce, SAP)",
       "Création d'un entrepôt de données avec un modèle en étoile",
       "Conception de tableaux de bord via SAP BI 4.3.",
       "Développement de sites web multipages avec Streamlit et déploiement sur AWS (CI/CD GitLab).",
