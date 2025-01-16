@@ -15,15 +15,15 @@ const skillCategories = [
     ]
   },
   {
-    title: "Programmation",
+    title: "Programmation & Outils",
     skills: [
       { name: "Python", value: 90 },
       { name: "POO", value: 85 },
       { name: "SQL/NoSQL", value: 85 },
       { name: "Git", value: 85 },
-      { name: "C/C++", value: 75 },
-      { name: "R", value: 80 },
-      { name: "Java", value: 70 },
+      { name: "MySQL, PostgreSQL", value: 85 },
+      { name: "SQL Server, SQLite", value: 80 },
+      { name: "MongoDB, Elasticsearch", value: 80 },
     ]
   },
   {
@@ -40,6 +40,7 @@ const skillCategories = [
   {
     title: "Expertise Technique",
     skills: [
+      { name: " Talend", value: 85 },
       { name: " Talend", value: 85 },
       { name: "Dataiku/Alteryx", value: 80 },
       { name: " DBT", value: 80 },
