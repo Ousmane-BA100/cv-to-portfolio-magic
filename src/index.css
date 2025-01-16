@@ -66,5 +66,5 @@
 }
 
 .section-title {
-  @apply text-3xl font-heading font-bold text-primary mb-8;
+  @apply text-3xl font-heading font-bold text-white mb-8 text-center bg-black py-4 rounded-lg;
 }
