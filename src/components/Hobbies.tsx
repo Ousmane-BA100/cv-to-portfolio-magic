@@ -68,7 +68,7 @@ export function Hobbies() {
                         </div>
                         <div className="w-full bg-gray-100 rounded-full h-2.5">
                           <div 
-                            className="bg-black h-2.5 rounded-full transition-all duration-500"
+                            className="bg-primary h-2.5 rounded-full transition-all duration-500"
                             style={{ width: `${skill.value}%` }}
                           />
                         </div>

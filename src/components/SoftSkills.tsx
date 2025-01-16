@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Slider } from "@/components/ui/slider";
 import { motion } from "framer-motion";
 
 const softSkillsCategories = [
@@ -69,7 +68,7 @@ export function SoftSkills() {
                         </div>
                         <div className="w-full bg-gray-100 rounded-full h-2.5">
                           <div 
-                            className="bg-black h-2.5 rounded-full transition-all duration-500"
+                            className="bg-primary h-2.5 rounded-full transition-all duration-500"
                             style={{ width: `${skill.value}%` }}
                           />
                         </div>
