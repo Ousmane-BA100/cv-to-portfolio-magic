@@ -42,7 +42,7 @@ const skillCategories = [
       { name: "Dataiku/Alteryx", value: 80 },
       { name: " DBT", value: 80 },
       { name: "Docker", value: 75 },
-      { name: "FastAPI/Flask/Django", value: 95}
+      { name: "FastAPI/Flask/Django", value: 95},
       { name: "CI/CD : GitHub Actions/GitLab CI", value: 95}
     ]
   }
