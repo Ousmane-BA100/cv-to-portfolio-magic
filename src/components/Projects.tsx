@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Pipeline de Streaming de Données",
+    title: "Pipeline de Streaming de Données - ETL de bout à bout et dataviz",
     period: "2023",
     technologies: ["Python", "Apache Spark", "MongoDB", "Streamlit"],
     description: "Développement d'une pipeline de streaming de données en temps réel pour le traitement et l'analyse de flux de données massives.",
@@ -30,20 +30,20 @@ const projects = [
   {
     title: "Big Data avec PySpark",
     period: "2022",
-    technologies: ["Python", "PySpark", "Pandas", "Matplotlib"],
-    description: "Analyse des trajets de bus et prédiction du temps de trajet en charge.",
+    technologies: ["Python", "PySpark", "Streamlit", "Google Collab", "GCP", "Docker", "Flask", "CI/CD"],
+    description: "Analyse des trajets de taxi NYC et prédiction du prise de passengers et le montant.",
     details: [
       "Traitement de données massives avec PySpark",
-      "Analyse statistique des temps de trajets",
+      "Analyse statistique de l'historique des trajets",
       "Développement de modèles prédictifs",
-      "Visualisation des résultats avec Matplotlib"
+      "Visualisation des résultats avec Streamlit"
     ]
   },
   {
     title: "Classification d'images",
     period: "2022",
     technologies: ["Python", "TensorFlow", "OpenCV", "Scikit-learn"],
-    description: "Classification d'éléments (big data vision) et en satellite.",
+    description: "Classification d'images provenant d'un satellite.",
     details: [
       "Prétraitement des images avec OpenCV",
       "Développement de modèles de classification",
