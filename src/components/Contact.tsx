@@ -43,7 +43,7 @@ export function Contact() {
               <Button 
                 variant="outline" 
                 className="mt-4 border-white text-white hover:bg-white hover:text-black"
-                onClick={() => window.open('/CV_Ousmane_BA.pdf', '_blank')}
+                onClick={() => window.open('/CV_Ousmane.pdf', '_blank')}
               >
                 Télécharger CV
               </Button>
