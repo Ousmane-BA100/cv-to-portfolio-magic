@@ -4,6 +4,19 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "Challenge Machine Learning - Prédiction des prix hôteliers",
+    period: "2023",
+    technologies: ["Python", "Scikit-learn", "Pandas", "XGBoost", "Kaggle", "Matplotlib"],
+    description: "Participation à un challenge Kaggle pour prédire les prix de réservation d'hôtels en utilisant des techniques avancées de Machine Learning.",
+    details: [
+      "Analyse exploratoire approfondie des données hôtelières",
+      "Prétraitement des données et feature engineering",
+      "Implémentation de plusieurs modèles ML (Random Forest, XGBoost)",
+      "Optimisation des hyperparamètres avec GridSearchCV",
+      "Visualisation des résultats et analyse des performances"
+    ]
+  },
+  {
     title: "Pipeline de Streaming de Données - ETL et dataviz",
     period: "2023",
     technologies: ["Python", "Apache Spark", "MongoDB", "Streamlit"],
