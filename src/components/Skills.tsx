@@ -7,9 +7,9 @@ const skillCategories = [
     skills: [
       { name: "ETL Pipelines", value: 85 },
       { name: "PySpark", value: 90 },
-      { name: "MapReduce", value: 80 },
+      { name: "Hadoop", value: 80 },
       { name: "AWS (EC2, Lambda, Fargate)", value: 85 },
-      { name: "GCP (Compute Engine)", value: 80 },
+      { name: "GCP (BigQuery, Compute Engine, Cloud Run...)", value: 80 },
       { name: "Databricks", value: 85 },
       { name: "SnowFlake", value: 80 },
     ]
@@ -19,9 +19,9 @@ const skillCategories = [
     skills: [
       { name: "Python", value: 90 },
       { name: "SQL/NoSQL", value: 85 },
-      { name: "Git/GitHub", value: 85 },
+      { name: "Git", value: 85 },
       { name: "C/C++", value: 75 },
-      { name: "React", value: 80 },
+      { name: "R", value: 80 },
     ]
   },
   {
@@ -32,6 +32,18 @@ const skillCategories = [
       { name: "Scikit-learn", value: 85 },
       { name: "TensorFlow/PyTorch", value: 80 },
       { name: "Traitement d'images", value: 75 },
+      { name: "Pandas, NumPy", value: 95}
+    ]
+  },
+  {
+    title: "Expertise Technique",
+    skills: [
+      { name: " Talend", value: 85 },
+      { name: "Dataiku/Alteryx", value: 80 },
+      { name: " DBT", value: 80 },
+      { name: "Docker", value: 75 },
+      { name: "FastAPI/Flask/Django", value: 95}
+      { name: "CI/CD : GitHub Actions/GitLab CI", value: 95}
     ]
   }
 ];
