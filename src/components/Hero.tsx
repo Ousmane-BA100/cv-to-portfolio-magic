@@ -20,8 +20,9 @@ export function Hero() {
           </h2>
           
           <p className="text-lg text-gray-600 max-w-2xl">
-            Passionné par l'analyse de données et le machine learning, je transforme les données en insights actionnables. 
-            Expert en conception de pipelines de données et en développement de solutions analytiques.
+            Passionné par la gestion et l'optimisation des données, je conçois et maintiens des infrastructures
+            performantes pour transformer des données brutes en insights exploitables. Expert en création de pipelines robustes,
+            modélisation de données, et intégration de solutions analytiques, je mets la puissance des données au service des décisions stratégiques des entreprises.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
