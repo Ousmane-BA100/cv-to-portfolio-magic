@@ -46,11 +46,11 @@ export function Navigation() {
             <NavLink href="#skills" isActive={activeSection === "skills"}>
               Compétences
             </NavLink>
-            <NavLink href="#projects" isActive={activeSection === "projects"}>
-              Projets
-            </NavLink>
             <NavLink href="#experiences" isActive={activeSection === "experiences"}>
               Expérience
+            </NavLink>
+            <NavLink href="#projects" isActive={activeSection === "projects"}>
+              Projets
             </NavLink>
             <NavLink href="#education" isActive={activeSection === "education"}>
               Diplômes
