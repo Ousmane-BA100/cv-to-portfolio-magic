@@ -1,7 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown } from "lucide-react";
 
 const skillCategories = [
   {
@@ -66,35 +64,26 @@ export function Skills() {
                 show: { opacity: 1, y: 0 }
               }}
             >
-              <Card className="h-full hover:shadow-lg transition-all duration-300">
-                <Collapsible>
-                  <CollapsibleTrigger className="w-full">
-                    <CardContent className="p-6 flex justify-between items-center">
-                      <h3 className="text-xl font-semibold text-primary">{category.title}</h3>
-                      <ChevronDown className="h-5 w-5" />
-                    </CardContent>
-                  </CollapsibleTrigger>
-                  <CollapsibleContent>
-                    <CardContent className="pt-0 px-6 pb-6">
-                      <div className="space-y-4">
-                        {category.skills.map((skill) => (
-                          <div key={skill.name} className="space-y-2">
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm font-medium">{skill.name}</span>
-                              <span className="text-sm font-medium">{skill.value}%</span>
-                            </div>
-                            <div className="w-full bg-gray-100 rounded-full h-2">
-                              <div 
-                                className="bg-primary h-2 rounded-full transition-all duration-500"
-                                style={{ width: `${skill.value}%` }}
-                              />
-                            </div>
-                          </div>
-                        ))}
+              <Card className="h-full hover:shadow-lg transition-all duration-300 bg-white">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-6 text-primary">{category.title}</h3>
+                  <div className="space-y-4">
+                    {category.skills.map((skill) => (
+                      <div key={skill.name} className="space-y-2">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm font-medium">{skill.name}</span>
+                          <span className="text-sm font-medium">{skill.value}%</span>
+                        </div>
+                        <div className="w-full bg-gray-100 rounded-full h-2">
+                          <div 
+                            className="bg-primary h-2 rounded-full transition-all duration-500"
+                            style={{ width: `${skill.value}%` }}
+                          />
+                        </div>
                       </div>
-                    </CardContent>
-                  </CollapsibleContent>
-                </Collapsible>
+                    ))}
+                  </div>
+                </CardContent>
               </Card>
             </motion.div>
           ))}
