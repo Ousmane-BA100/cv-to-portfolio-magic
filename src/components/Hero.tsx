@@ -48,10 +48,10 @@ export function Hero() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-            <InfoCard icon={<User className="w-5 h-5" />} text="28 ans" />
+            <InfoCard icon={<User className="w-5 h-5" />} text="27 ans" />
             <InfoCard icon={<MapPin className="w-5 h-5" />} text="Paris, France" />
             <InfoCard icon={<Car className="w-5 h-5" />} text="Permis B" />
-            <InfoCard icon={<Flag className="w-5 h-5" />} text="Sénégalais" />
+            <InfoCard icon={<Flag className="w-5 h-5" />} text="Single" />
           </div>
 
           <div className="flex gap-4 mt-8">
