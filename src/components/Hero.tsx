@@ -1,7 +1,29 @@
 import { motion } from "framer-motion";
 import { MapPin, User, Car, Flag } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export function Hero() {
+  const [text, setText] = useState("");
+  const fullText = "Empowering Businesses Through Data, Driving Innovation with Code";
+  
+  useEffect(() => {
+    let currentIndex = 0;
+    const intervalId = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        // Reset animation after completion
+        setTimeout(() => {
+          currentIndex = 0;
+          setText("");
+        }, 2000); // Wait 2 seconds before restarting
+      }
+    }, 100); // Adjust speed of typing here
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center bg-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -70,24 +92,11 @@ export function Hero() {
             </div>
           </motion.div>
           
-          <motion.div 
-            className="text-center mt-8"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ 
-              opacity: 1, 
-              x: [0, 10, 0] 
-            }}
-            transition={{ 
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut"
-            }}
-          >
-            <p className="text-2xl font-heading italic text-gray-800">
-              "Turning Data into Insights, Code into Innovation"
+          <div className="text-center mt-8">
+            <p className="text-2xl font-heading italic text-gray-800 min-h-[2.5rem]">
+              "{text}"
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
