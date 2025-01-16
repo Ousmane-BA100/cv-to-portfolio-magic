@@ -20,7 +20,7 @@ export function Navigation() {
           <div className="flex items-center space-x-8">
             <NavLink href="#skills">Compétences</NavLink>
             <NavLink href="#projects">Projets</NavLink>
-            <NavLink href="#experience">Expérience</NavLink>
+            <NavLink href="#experiences">Expérience</NavLink>
             <NavLink href="#education">Diplômes</NavLink>
             <NavLink href="#soft-skills">Soft Skills</NavLink>
             <NavLink href="#hobbies">Hobbies</NavLink>
