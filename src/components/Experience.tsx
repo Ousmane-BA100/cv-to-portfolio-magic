@@ -8,12 +8,23 @@ const experiences = [
     period: "09/2023 - 09/2025",
     location: "Colombes, 92700",
     description: [
-      "Mise en œuvre de workflows ETL : Sources de données Salesforce, SAP, MySQL et fichiers plats vers MySQL",
-      "Création d'un entrepôt de données avec un modèle en étoile",
-      "Conception de tableaux de bord via SAP BI 4.3.",
-      "Développement de sites web multipages avec Streamlit et déploiement sur AWS (CI/CD GitLab).",
-      "Technologies : Pycharm, AWS (EC2, Lambda, Fargate), Pycharm, Python, JSON, MySQL Workbench, APIs (Salesforce, SAP)"
+      {
+        text: "Mise en œuvre de workflows ETL : Sources de données Salesforce, SAP, MySQL et fichiers plats vers MySQL",
+        impact: "Création d'un entrepôt de données structuré avec un modèle en étoile, facilitant l'analyse et l'interrogation des données",
+        learned: "Maîtrise des bonnes pratiques ETL pour l'extraction et la transformation des données depuis des sources hétérogènes"
+      },
+      {
+        text: "Conception de tableaux de bord via SAP BI 4.3",
+        impact: "Élaboration de tableaux de bord intuitifs permettant de fournir des insights précis aux équipes décisionnelles",
+        learned: "Utilisation avancée de SAP BI pour répondre aux besoins métier et offrir des outils décisionnels robustes"
+      },
+      {
+        text: "Développement de sites web multipages avec Streamlit et déploiement sur AWS (CI/CD GitLab)",
+        impact: "Réduction des délais de mise en production et amélioration de la qualité des livrables",
+        learned: "Maîtrise du déploiement continu et de l'intégration CI/CD avec GitLab sur AWS"
+      }
     ],
+    technologies: "Pycharm, AWS (EC2, Lambda, Fargate), Python, JSON, MySQL Workbench, APIs (Salesforce, SAP)"
   },
   {
     title: "Data Analyst/Scientist - Stage",
@@ -66,12 +77,23 @@ export function Experience() {
                           <div>{item.text}</div>
                           <div className="flex items-start gap-2 ml-4 text-sm text-primary italic">
                             <ArrowRight className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                            <span>{item.impact}</span>
+                            <span>Impact : {item.impact}</span>
                           </div>
+                          {item.learned && (
+                            <div className="flex items-start gap-2 ml-4 text-sm text-secondary italic">
+                              <ArrowRight className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                              <span>Apprentissage : {item.learned}</span>
+                            </div>
+                          )}
                         </div>
                       )}
                     </li>
                   ))}
+                  {exp.technologies && (
+                    <li className="text-muted-foreground mt-4">
+                      <strong>Technologies :</strong> {exp.technologies}
+                    </li>
+                  )}
                 </ul>
               </CardContent>
             </Card>
