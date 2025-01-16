@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Pipeline de Streaming de Données - ETL de bout à bout et dataviz",
+    title: "Pipeline de Streaming de Données - ETL et dataviz",
     period: "2023",
     technologies: ["Python", "Apache Spark", "MongoDB", "Streamlit"],
     description: "Développement d'une pipeline de streaming de données en temps réel pour le traitement et l'analyse de flux de données massives.",
