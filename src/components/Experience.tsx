@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 
 const experiences = [
   {
@@ -22,8 +23,14 @@ const experiences = [
     description: [
       "Extraction de données clients inactifs via des requêtes SQL",
       "Préparation de données : nettoyage des variables, gestion des valeurs manquantes",
-      "Segmentation des clients inactifs avec K-means et HAC",
-      "Modélisation prédictive pour optimiser le personnel du centre d'appels",
+      {
+        text: "Segmentation des clients inactifs avec K-means et HAC",
+        impact: "Segmentation permettant de cibler efficacement les campagnes marketing pour convertir les clients inactifs en actifs, avec un impact direct sur le taux de réactivation"
+      },
+      {
+        text: "Modélisation prédictive pour optimiser le personnel du centre d'appels",
+        impact: "Les prévisions ont permis de déterminer le volume d'appels quotidien, aboutissant à une réduction des effectifs nécessaires de 10% tout en maintenant un service client de qualité"
+      },
       "Outils utilisés : R, Python, SPSS, SQL, Excel",
     ],
   },
@@ -49,10 +56,20 @@ export function Experience() {
                 </div>
               </CardHeader>
               <CardContent>
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-none space-y-4">
                   {exp.description.map((item, index) => (
                     <li key={index} className="text-muted-foreground">
-                      {item}
+                      {typeof item === 'string' ? (
+                        item
+                      ) : (
+                        <div className="space-y-2">
+                          <div>{item.text}</div>
+                          <div className="flex items-start gap-2 ml-4 text-sm text-primary italic">
+                            <ArrowRight className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                            <span>{item.impact}</span>
+                          </div>
+                        </div>
+                      )}
                     </li>
                   ))}
                 </ul>
