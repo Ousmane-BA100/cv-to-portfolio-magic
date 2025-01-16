@@ -40,13 +40,13 @@ const skillCategories = [
   {
     title: "Expertise Technique",
     skills: [
-      { name: " Talend", value: 85 },
-      { name: " Talend", value: 85 },
-      { name: "Dataiku/Alteryx", value: 80 },
-      { name: " DBT", value: 80 },
+      { name: " Talend", value: 80 },
+      { name: " Alteryx", value: 75 },
+      { name: "Dataiku", value: 70 },
+      { name: " Data Buil Tool", value: 65 },
       { name: "Docker", value: 75 },
-      { name: "FastAPI/Flask/Django", value: 95},
-      { name: "GitHub Actions/GitLab CI", value: 95}
+      { name: "FastAPI/Flask/Django", value: 80},
+      { name: "CI/CD", value: 70}
     ]
   }
 ];
