@@ -11,7 +11,7 @@ const skillCategories = [
       { name: "AWS (EC2, Lambda, Fargate)", value: 85 },
       { name: "GCP (BigQuery, Compute Engine, Cloud Run...)", value: 80 },
       { name: "Databricks", value: 85 },
-      { name: "SnowFlake", value: 80 },
+      { name: "SnowFlake", value: 80 }
     ]
   },
   {
@@ -23,7 +23,7 @@ const skillCategories = [
       { name: "Git", value: 80 },
       { name: "MySQL, PostgreSQL", value: 90 },
       { name: "SQL Server, SQLite", value: 80 },
-      { name: "MongoDB, Elasticsearch", value: 70 },
+      { name: "MongoDB, Elasticsearch", value: 70 }
     ]
   },
   {
@@ -34,7 +34,7 @@ const skillCategories = [
       { name: "Scikit-learn", value: 85 },
       { name: "TensorFlow/PyTorch", value: 80 },
       { name: "Traitement d'images", value: 75 },
-      { name: "Pandas, NumPy", value: 95}
+      { name: "Pandas, NumPy", value: 95 }
     ]
   },
   {
@@ -45,11 +45,11 @@ const skillCategories = [
       { name: "Dataiku", value: 70 },
       { name: " Data Buil Tool", value: 65 },
       { name: "Docker", value: 75 },
-      { name: "FastAPI/Flask/Django", value: 80},
-      { name: "CI/CD", value: 70}
+      { name: "FastAPI/Flask/Django", value: 80 },
+      { name: "CI/CD", value: 70 }
     ]
   }
-};
+];
 
 const container = {
   hidden: { opacity: 0 },
