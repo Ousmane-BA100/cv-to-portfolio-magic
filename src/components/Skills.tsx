@@ -49,7 +49,22 @@ const skillCategories = [
       { name: "CI/CD", value: 70}
     ]
   }
-];
+};
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 }
+};
 
 export function Skills() {
   return (
@@ -59,13 +74,7 @@ export function Skills() {
           Compétences
         </h2>
         <motion.div 
-          variants={{
-            hidden: { opacity: 0 },
-            show: {
-              opacity: 1,
-              transition: { staggerChildren: 0.2 }
-            }
-          }}
+          variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
@@ -74,14 +83,11 @@ export function Skills() {
           {skillCategories.map((category) => (
             <motion.div 
               key={category.title}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                show: { opacity: 1, y: 0 }
-              }}
+              variants={item}
             >
               <Card className="h-full hover:shadow-lg transition-all duration-300 bg-white">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-6 text-primary">{category.title}</h3>
+                  <h3 className="text-xl font-semibold mb-6 text-secondary">{category.title}</h3>
                   <div className="space-y-4">
                     {category.skills.map((skill) => (
                       <div key={skill.name} className="space-y-2">
