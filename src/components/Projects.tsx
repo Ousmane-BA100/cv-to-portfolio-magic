@@ -49,7 +49,7 @@ const projects = [
       "Traitement de données massives avec PySpark",
       "Analyse statistique de l'historique des trajets",
       "Développement de modèles prédictifs",
-      "Visualisation des résultats avec Streamlit"
+      "Visualisation des résultats avec Streamlit",
       "Deploiement sur GCP via github action (CI/CD)"
     ]
   },
