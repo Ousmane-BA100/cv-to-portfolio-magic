@@ -29,7 +29,7 @@ const projects = [
     ]
   },
   {
-    title: "Mise en place d'une plateforme Interne",
+    title: "Mise en place d'une plateforme In-learning",
     period: "2023",
     technologies: ["Python", "Django", "PostgreSQL", "HTML/CSS"],
     description: "Mise en place d'une plateforme web pour la gestion des cours pour les étudiants.",
