@@ -4,6 +4,43 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "Mise en place d'une plateforme In-learning",
+    period: "2025",
+    technologies: ["Python", "Django", "PostgreSQL", "HTML/CSS"],
+    description: "Mise en place d'une plateforme web pour la gestion des cours pour les étudiants.",
+    details: [
+      "Développement backend avec Django et PostgreSQL",
+      "Système de gestion des utilisateurs et des rôles",
+      "Interface d'administration pour les formateurs",
+      "Suivi des progrès des étudiants"
+    ]
+  },
+  {
+    title: "Big Data avec PySpark",
+    period: "2024",
+    technologies: ["Python", "PySpark", "Streamlit", "GCP", "Docker", "Flask", "CI/CD"],
+    description: "Analyse des trajets de taxi NYC et prédiction sur la prise des passagers et les montants des courses.",
+    details: [
+      "Traitement de données massives avec PySpark",
+      "Analyse statistique de l'historique des trajets",
+      "Développement de modèles prédictifs",
+      "Visualisation des résultats avec Streamlit",
+      "Deploiement sur GCP via github action (CI/CD)"
+    ]
+  },
+  {
+    title: "Pipeline de Streaming de Données - ETL et dataviz",
+    period: "2024",
+    technologies: ["Python", "Apache Spark", "MongoDB", "Streamlit"],
+    description: "Développement d'une pipeline de streaming de données en temps réel pour le traitement et l'analyse de flux de données massives.",
+    details: [
+      "Mise en place d'une architecture de streaming avec Apache Spark",
+      "Intégration avec MongoDB pour le stockage des données",
+      "Interface de visualisation en temps réel avec Streamlit",
+      "Optimisation des performances de traitement"
+    ]
+  },
+  {
     title: "Challenge Machine Learning - Prédiction des prix hôteliers",
     period: "2023",
     technologies: ["Python", "Scikit-learn", "Pandas", "XGBoost", "Kaggle", "Matplotlib"],
@@ -17,45 +54,8 @@ const projects = [
     ]
   },
   {
-    title: "Pipeline de Streaming de Données - ETL et dataviz",
-    period: "2023",
-    technologies: ["Python", "Apache Spark", "MongoDB", "Streamlit"],
-    description: "Développement d'une pipeline de streaming de données en temps réel pour le traitement et l'analyse de flux de données massives.",
-    details: [
-      "Mise en place d'une architecture de streaming avec Apache Spark",
-      "Intégration avec MongoDB pour le stockage des données",
-      "Interface de visualisation en temps réel avec Streamlit",
-      "Optimisation des performances de traitement"
-    ]
-  },
-  {
-    title: "Mise en place d'une plateforme In-learning",
-    period: "2023",
-    technologies: ["Python", "Django", "PostgreSQL", "HTML/CSS"],
-    description: "Mise en place d'une plateforme web pour la gestion des cours pour les étudiants.",
-    details: [
-      "Développement backend avec Django et PostgreSQL",
-      "Système de gestion des utilisateurs et des rôles",
-      "Interface d'administration pour les formateurs",
-      "Suivi des progrès des étudiants"
-    ]
-  },
-  {
-    title: "Big Data avec PySpark",
-    period: "2022",
-    technologies: ["Python", "PySpark", "Streamlit", "GCP", "Docker", "Flask", "CI/CD"],
-    description: "Analyse des trajets de taxi NYC et prédiction sur la prise des passagers et les montants des courses.",
-    details: [
-      "Traitement de données massives avec PySpark",
-      "Analyse statistique de l'historique des trajets",
-      "Développement de modèles prédictifs",
-      "Visualisation des résultats avec Streamlit",
-      "Deploiement sur GCP via github action (CI/CD)"
-    ]
-  },
-  {
     title: "Classification d'images",
-    period: "2022",
+    period: "2023",
     technologies: ["Python", "TensorFlow", "OpenCV", "Scikit-learn"],
     description: "Classification d'images provenant d'un satellite.",
     details: [
@@ -66,8 +66,8 @@ const projects = [
     ]
   },
   {
-    title: "Apprentissage Supervisé",
-    period: "2022",
+    title: "Apprentissage Supervisé sur la consommation de gaz",
+    period: "2023",
     technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
     description: "Analyse de la consommation de gaz dans divers départements français.",
     details: [
