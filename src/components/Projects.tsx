@@ -43,13 +43,14 @@ const projects = [
   {
     title: "Big Data avec PySpark",
     period: "2022",
-    technologies: ["Python", "PySpark", "Streamlit", "Google Collab", "GCP", "Docker", "Flask", "CI/CD"],
-    description: "Analyse des trajets de taxi NYC et prédiction du prise de passengers et le montant.",
+    technologies: ["Python", "PySpark", "Streamlit", "GCP", "Docker", "Flask", "CI/CD"],
+    description: "Analyse des trajets de taxi NYC et prédiction sur la prise des passagers et les montants des courses.",
     details: [
       "Traitement de données massives avec PySpark",
       "Analyse statistique de l'historique des trajets",
       "Développement de modèles prédictifs",
       "Visualisation des résultats avec Streamlit"
+      "Deploiement sur GCP via github action (CI/CD)"
     ]
   },
   {
