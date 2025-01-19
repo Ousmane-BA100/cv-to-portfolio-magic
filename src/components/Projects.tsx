@@ -41,7 +41,7 @@ const projects = [
     ]
   },
   {
-    title: "Challenge Machine Learning - Prédiction des prix hôteliers",
+    title: "Challenge ML - Prédiction des prix hôteliers",
     period: "2023",
     technologies: ["Python", "Scikit-learn", "Pandas", "XGBoost", "Kaggle", "Matplotlib"],
     description: "Participation à un challenge Kaggle pour prédire les prix de réservation d'hôtels en utilisant des techniques avancées de Machine Learning.",
