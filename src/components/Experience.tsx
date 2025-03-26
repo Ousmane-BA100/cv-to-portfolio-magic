@@ -29,7 +29,7 @@ const experiences = [
   {
     title: "Data Analyst/Scientist - Stage",
     company: "Stage CIC Sud-Ouest (Banque)",
-    period: "04/2023 - 06/2023",
+    period: "03/2023 - 09/2023",
     location: "Bordeaux, 33300",
     description: [
       {
